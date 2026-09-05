@@ -7,6 +7,7 @@
     ../../modules/user.nix
     ../../modules/sway.nix
     ../../modules/nvidia.nix
+    ../../modules/audio.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -20,16 +21,6 @@
 
   # CUPS.
   services.printing.enable = true;
-
-  # Pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
