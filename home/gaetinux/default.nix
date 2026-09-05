@@ -3,6 +3,7 @@
 {
   imports = [
     ./packages.nix
+    ./sway.nix
   ];
     
   home.username = "gaetinux";

@@ -18,13 +18,4 @@
       };
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    wl-clipboard
-    mako
-    wofi
-    pavucontrol
-    brightnessctl
-    waybar
-  ];
 }
