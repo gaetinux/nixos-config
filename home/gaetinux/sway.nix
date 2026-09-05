@@ -12,6 +12,7 @@
 
       startup = [
         { command = "waybar"; }
+        { command = "mako"; }
       ];
 
       input = {

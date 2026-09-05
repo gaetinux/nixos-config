@@ -5,6 +5,7 @@
     ./packages.nix
     ./sway.nix
     ./waybar.nix
+    ./mako.nix
   ];
     
   home.username = "gaetinux";

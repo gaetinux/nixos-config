@@ -12,5 +12,6 @@
     keepassxc
     openfortivpn
     remmina
+    libnotify
   ];
 }
