@@ -8,6 +8,7 @@
     ../../modules/sway.nix
     ../../modules/nvidia.nix
     ../../modules/audio.nix
+    ../../modules/virtualization.nix
   ];
 
   # Boot
@@ -19,14 +20,6 @@
 
   # Gaming
   programs.steam.enable = true;
-
-  # Virtualization
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    dnsmasq
-  ];
 
   # Keep this value at the NixOS version used for the initial installation.
   system.stateVersion = "26.05";
