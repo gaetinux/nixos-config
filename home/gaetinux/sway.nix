@@ -106,7 +106,6 @@
   };
 
   home.packages = with pkgs; [
-    foot
     wmenu
     wl-clipboard
     playerctl
