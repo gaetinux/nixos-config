@@ -17,6 +17,10 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
+  services.xserver.xkb = {
+    layout = "fr";
+  };
+
   console.keyMap = "fr";
 
   networking.networkmanager.enable = true;

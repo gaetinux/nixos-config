@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/common.nix
+    ../../modules/user.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -46,15 +47,6 @@
     ];
   };
 
-
-  # X11 keymap.
-  services.xserver.xkb = {
-    layout = "fr";
-  };
-
-  # Console keymap.
-  console.keyMap = "fr";
-
   # Nvidia.
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -85,27 +77,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-  };
-
-  # User account.
-  users.users."gaetinux" = {
-    isNormalUser = true;
-    description = "Gaetan Pawlowski";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; [
-      # lazyvim
-      fzf
-      ripgrep
-      fd
-      gcc
-
-      git
-      vscodium
-      neovim
-      keepassxc
-      openfortivpn
-      remmina
-    ];
   };
 
   programs.appimage.enable = true;
