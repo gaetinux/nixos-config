@@ -21,7 +21,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.gaetinux = import ./home/gaetinux.nix;
+          home-manager.users.gaetinux = import ./home/gaetinux;
         }
       ];
     };
