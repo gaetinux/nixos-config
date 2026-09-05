@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -6,6 +6,7 @@
     ../../modules/common.nix
     ../../modules/user.nix
     ../../modules/sway.nix
+    ../../modules/nvidia.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -19,32 +20,10 @@
 
   systemd.services.greetd.serviceConfig = {
     Environment = [
-      "GBM_BACKEND=nvidia-drm"
-      "__GLX_VENDOR_LIBRARY_NAME=nvidia"
-      "WLR_NO_HARDWARE_CURSORS=1"
       "NIXOS_OZONE_WL=1"
       "MOZ_ENABLE_WAYLAND=1"
     ];
   };
-
-  # Nvidia.
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = true; 
-    nvidiaSettings = true;
-    #package = config.boot.kernelPackages.nvidiaPackages.stable;
-    powerManagement.enable = false; 
-  };
-
-  # environment.sessionVariables = {
-  #   NIXOS_OZONE_WL = "1"; 
-  #   GBM_BACKEND = "nvidia-drm";
-  #   __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-  #   WLR_NO_HARDWARE_CURSORS = "1"; 
-  # };
 
   # CUPS.
   services.printing.enable = true;

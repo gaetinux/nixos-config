@@ -1,0 +1,22 @@
+{ ... }:
+
+{
+  hardware.graphics.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = true;
+    nvidiaSettings = true;
+    powerManagement.enable = false;
+  };
+
+  systemd.services.greetd.serviceConfig = {
+    Environment = [
+      "GBM_BACKEND=nvidia-drm"
+      "__GLX_VENDOR_LIBRARY_NAME=nvidia"
+      "WLR_NO_HARDWARE_CURSORS=1"
+    ];
+  };
+}
