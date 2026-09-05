@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   users.users.gaetinux = {
@@ -8,20 +8,6 @@
       "networkmanager"
       "wheel"
       "libvirtd"
-    ];
-
-    packages = with pkgs; [
-      fzf
-      ripgrep
-      fd
-      gcc
-
-      git
-      vscodium
-      neovim
-      keepassxc
-      openfortivpn
-      remmina
     ];
   };
 }
