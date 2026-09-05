@@ -4,6 +4,7 @@
   imports = [
     ./packages.nix
     ./sway.nix
+    ./waybar.nix
   ];
     
   home.username = "gaetinux";

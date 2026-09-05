@@ -10,6 +10,10 @@
       terminal = "foot";
       menu = "wmenu-run";
 
+      startup = [
+        { command = "waybar"; }
+      ];
+
       input = {
         "type:keyboard" = {
           xkb_layout = "fr";
