@@ -18,13 +18,6 @@
   # X11.
   #services.xserver.enable = true;
 
-  systemd.services.greetd.serviceConfig = {
-    Environment = [
-      "NIXOS_OZONE_WL=1"
-      "MOZ_ENABLE_WAYLAND=1"
-    ];
-  };
-
   # CUPS.
   services.printing.enable = true;
 
