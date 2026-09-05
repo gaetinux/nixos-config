@@ -28,4 +28,6 @@
   services.tailscale.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+
+  services.printing.enable = true;
 }

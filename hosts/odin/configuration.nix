@@ -19,9 +19,6 @@
   # X11.
   #services.xserver.enable = true;
 
-  # CUPS.
-  services.printing.enable = true;
-
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
   programs.firefox.enable = true;
