@@ -10,7 +10,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages;
 
-  networking.hostName = "nixos"; 
+  networking.hostName = "odin"; 
   networking.networkmanager.enable = true;
   services.tailscale.enable = true;
 

@@ -6,11 +6,11 @@
   };
 
   outputs = { self, nixpkgs, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.odin = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
-            ./configuration.nix
+            ./hosts/odin/configuration.nix
         ];
     };
   };
