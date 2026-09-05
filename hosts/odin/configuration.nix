@@ -9,6 +9,7 @@
     ../../modules/nvidia.nix
     ../../modules/audio.nix
     ../../modules/virtualization.nix
+    ../../modules/gaming.nix
   ];
 
   # Boot
@@ -17,9 +18,6 @@
   boot.kernelPackages = pkgs.linuxPackages;
 
   networking.hostName = "odin"; 
-
-  # Gaming
-  programs.steam.enable = true;
 
   # Keep this value at the NixOS version used for the initial installation.
   system.stateVersion = "26.05";
