@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../../modules/common.nix
     ../../modules/user.nix
+    ../../modules/sway.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -15,27 +16,6 @@
 
   # X11.
   #services.xserver.enable = true;
-
-  # Enables Gnome Keyring to store secrets for applications. 
-  services.gnome.gnome-keyring.enable = true;
-
-  # Enable Sway.
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-    extraOptions = [ "--unsupported-gpu" ];
-  };
-
-  # Greeter.
-  services.greetd = {                                                      
-    enable = true;                                                         
-    settings = {                                                           
-      default_session = {                                                  
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
-        user = "greeter";                                                  
-      };                                                                   
-    };                                                                     
-  };
 
   systemd.services.greetd.serviceConfig = {
     Environment = [
@@ -90,13 +70,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wl-clipboard # Copy/Paste functionality.
-    mako # Notification utility.
-    wofi # Applications launcher.
-    pavucontrol # Volume.
-    brightnessctl
-    waybar
-
     htop
     dnsmasq
     papirus-icon-theme
