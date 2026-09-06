@@ -11,6 +11,8 @@
         layer = "overlay";
         width = 40;
         lines = 10;
+
+        icon-theme = "Papirus-Dark";
       };
 
       colors = {

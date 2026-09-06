@@ -9,6 +9,7 @@
     ./foot.nix
     ./fuzzel.nix
     ./vscodium.nix
+    ./gtk.nix
   ];
     
   home.username = "gaetinux";

@@ -45,6 +45,5 @@
   # Utilities
   environment.systemPackages = with pkgs; [
     htop
-    papirus-icon-theme
   ];
 }
