@@ -21,7 +21,12 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.gaetinux = import ./home/gaetinux;
+          home-manager.users.gaetinux = {
+            imports = [
+              ./home/gaetinux
+              ./home/gaetinux/hosts/odin.nix
+            ];
+          };
         }
       ];
     };
