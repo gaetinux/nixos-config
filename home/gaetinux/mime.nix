@@ -16,6 +16,20 @@
 
       # Text
       "text/plain" = [ "codium.desktop" ];
+
+      # PDF
+      "application/pdf" = [ "org.gnome.Evince.desktop" ];
+
+      # Images
+      "image/png" = [ "imv.desktop" ];
+      "image/jpeg" = [ "imv.desktop" ];
+      "image/webp" = [ "imv.desktop" ];
+      "image/gif" = [ "imv.desktop" ];
+
+      # Video
+      "video/mp4" = [ "mpv.desktop" ];
+      "video/x-matroska" = [ "mpv.desktop" ];
+      "video/webm" = [ "mpv.desktop" ];
     };
   };
 }

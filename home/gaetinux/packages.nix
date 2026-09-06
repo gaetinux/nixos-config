@@ -2,16 +2,15 @@
 
 {
   home.packages = with pkgs; [
-    fd
-    fzf
-    gcc
+    evince
     git
+    imv
     keepassxc
     libnotify
+    mpv
     neovim
     openfortivpn
     pavucontrol
     remmina
-    ripgrep
   ];
 }
