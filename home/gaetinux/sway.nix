@@ -15,6 +15,14 @@
         { command = "waybar"; }
         { command = "mako"; }
         { command = "nm-applet --indicator"; }
+
+        # Startup applications
+        { command = "steam -silent"; }
+        {
+          command = ''"/home/gaetinux/Documents/AppImages/kDrive-3.8.5.2-amd64.AppImage"'';
+        }
+
+        # Start on workspace 1
         { command = "sleep 0.5 && swaymsg workspace number 1"; }
       ];
 
