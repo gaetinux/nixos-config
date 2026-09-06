@@ -56,6 +56,10 @@
           on-click = "pavucontrol";
         };
 
+        tray = {
+          spacing = 10;
+        };
+
         clock = {
           format = "{:%H:%M}";
           format-alt = "{:%A %d %B %Y}";
