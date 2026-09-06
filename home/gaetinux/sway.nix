@@ -30,15 +30,27 @@
         "${modifier}+Shift+q" = "kill";
         "${modifier}+d" = "exec fuzzel";
 
+        # Focus
         "${modifier}+h" = "focus left";
         "${modifier}+j" = "focus down";
         "${modifier}+k" = "focus up";
         "${modifier}+l" = "focus right";
 
+        "${modifier}+Left" = "focus left";
+        "${modifier}+Down" = "focus down";
+        "${modifier}+Up" = "focus up";
+        "${modifier}+Right" = "focus right";
+
+        # Move windows
         "${modifier}+Shift+h" = "move left";
         "${modifier}+Shift+j" = "move down";
         "${modifier}+Shift+k" = "move up";
         "${modifier}+Shift+l" = "move right";
+
+        "${modifier}+Shift+Left" = "move left";
+        "${modifier}+Shift+Down" = "move down";
+        "${modifier}+Shift+Up" = "move up";
+        "${modifier}+Shift+Right" = "move right";
 
         "${modifier}+f" = "fullscreen";
         "${modifier}+Shift+space" = "floating toggle";

@@ -3,6 +3,11 @@
 {
   services.gnome.gnome-keyring.enable = true;
 
+  security.pam.services = {
+    greetd.enableGnomeKeyring = true;
+    swaylock.enableGnomeKeyring = true;
+  };
+
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
