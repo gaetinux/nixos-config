@@ -84,8 +84,9 @@
       }
 
       window#waybar {
-        background: rgba(24, 24, 24, 0.96);
-        color: #e6e6e6;
+        background: #181818;
+        color: #ffffff;
+        border-bottom: 2px solid #2a2938;
       }
 
       #workspaces button {
@@ -96,7 +97,8 @@
 
       #workspaces button.focused {
         color: #ffffff;
-        background: #3a3a3a;
+        background: #2a2938;
+        box-shadow: inset 0 -2px #a99bc6;
       }
 
       #workspaces button.urgent {
@@ -114,12 +116,13 @@
       #network,
       #pulseaudio,
       #tray,
+      #custom-power,
       #clock {
         padding: 0 10px;
       }
 
       #custom-power {
-        padding: 0 10px;
+        color: #a99bc6;
         font-size: 15px;
       }
 
