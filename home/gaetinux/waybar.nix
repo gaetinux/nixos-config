@@ -22,7 +22,6 @@
         modules-right = [
           "cpu"
           "memory"
-          "network"
           "pulseaudio"
           "pulseaudio/slider"
           "tray"
@@ -43,13 +42,6 @@
         memory = {
           format = "RAM {percentage}%";
           interval = 5;
-        };
-
-        network = {
-          format-wifi = "󰤨  {signalStrength}%";
-          format-ethernet = "󰈀  Ethernet";
-          format-disconnected = "󰤭  Offline";
-          tooltip-format = "{ifname}: {ipaddr}";
         };
 
         pulseaudio = {
@@ -119,7 +111,6 @@
 
       #cpu,
       #memory,
-      #network,
       #pulseaudio,
       #tray,
       #custom-power,
