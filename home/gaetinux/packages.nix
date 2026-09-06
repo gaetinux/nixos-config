@@ -13,6 +13,5 @@
     pavucontrol
     remmina
     ripgrep
-    vscodium
   ];
 }

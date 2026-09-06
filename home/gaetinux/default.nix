@@ -8,6 +8,7 @@
     ./mako.nix
     ./foot.nix
     ./fuzzel.nix
+    ./vscodium.nix
   ];
     
   home.username = "gaetinux";
