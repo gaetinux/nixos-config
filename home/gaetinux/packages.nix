@@ -2,16 +2,17 @@
 
 {
   home.packages = with pkgs; [
-    fzf
-    ripgrep
     fd
+    fzf
     gcc
     git
-    vscodium
-    neovim
     keepassxc
-    openfortivpn
-    remmina
     libnotify
+    neovim
+    openfortivpn
+    pavucontrol
+    remmina
+    ripgrep
+    vscodium
   ];
 }
