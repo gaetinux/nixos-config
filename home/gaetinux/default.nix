@@ -10,6 +10,7 @@
     ./fuzzel.nix
     ./vscodium.nix
     ./gtk.nix
+    ./swaylock.nix
   ];
     
   home.username = "gaetinux";
