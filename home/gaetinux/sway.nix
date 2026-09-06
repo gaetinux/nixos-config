@@ -42,27 +42,29 @@
         "${modifier}+Shift+space" = "floating toggle";
         "${modifier}+space" = "focus mode_toggle";
 
-        "${modifier}+1" = "workspace number 1";
-        "${modifier}+2" = "workspace number 2";
-        "${modifier}+3" = "workspace number 3";
-        "${modifier}+4" = "workspace number 4";
-        "${modifier}+5" = "workspace number 5";
-        "${modifier}+6" = "workspace number 6";
-        "${modifier}+7" = "workspace number 7";
-        "${modifier}+8" = "workspace number 8";
-        "${modifier}+9" = "workspace number 9";
-        "${modifier}+0" = "workspace number 10";
+        # Workspaces
+        "${modifier}+ampersand" = "workspace number 1";
+        "${modifier}+eacute" = "workspace number 2";
+        "${modifier}+quotedbl" = "workspace number 3";
+        "${modifier}+apostrophe" = "workspace number 4";
+        "${modifier}+parenleft" = "workspace number 5";
+        "${modifier}+minus" = "workspace number 6";
+        "${modifier}+egrave" = "workspace number 7";
+        "${modifier}+underscore" = "workspace number 8";
+        "${modifier}+ccedilla" = "workspace number 9";
+        "${modifier}+agrave" = "workspace number 10";
 
-        "${modifier}+Shift+1" = "move container to workspace number 1";
-        "${modifier}+Shift+2" = "move container to workspace number 2";
-        "${modifier}+Shift+3" = "move container to workspace number 3";
-        "${modifier}+Shift+4" = "move container to workspace number 4";
-        "${modifier}+Shift+5" = "move container to workspace number 5";
-        "${modifier}+Shift+6" = "move container to workspace number 6";
-        "${modifier}+Shift+7" = "move container to workspace number 7";
-        "${modifier}+Shift+8" = "move container to workspace number 8";
-        "${modifier}+Shift+9" = "move container to workspace number 9";
-        "${modifier}+Shift+0" = "move container to workspace number 10";
+        # Move windows to workspaces
+        "${modifier}+Shift+ampersand" = "move container to workspace number 1";
+        "${modifier}+Shift+eacute" = "move container to workspace number 2";
+        "${modifier}+Shift+quotedbl" = "move container to workspace number 3";
+        "${modifier}+Shift+apostrophe" = "move container to workspace number 4";
+        "${modifier}+Shift+parenleft" = "move container to workspace number 5";
+        "${modifier}+Shift+minus" = "move container to workspace number 6";
+        "${modifier}+Shift+egrave" = "move container to workspace number 7";
+        "${modifier}+Shift+underscore" = "move container to workspace number 8";
+        "${modifier}+Shift+ccedilla" = "move container to workspace number 9";
+        "${modifier}+Shift+agrave" = "move container to workspace number 10";
 
         # Layout
         "${modifier}+b" = "splith";
@@ -73,8 +75,8 @@
         "${modifier}+a" = "focus parent";
 
         # Scratchpad
-        "${modifier}+Shift+minus" = "move scratchpad";
-        "${modifier}+minus" = "scratchpad show";
+        #"${modifier}+Shift+minus" = "move scratchpad";
+        #"${modifier}+minus" = "scratchpad show";
 
         # Session
         "${modifier}+Shift+c" = "reload";
