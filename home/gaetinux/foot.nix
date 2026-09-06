@@ -17,6 +17,11 @@
       mouse = {
         hide-when-typing = "yes";
       };
+      
+      colors-dark = {
+        background = "181818";
+        foreground = "e6e6e6";
+      };
     };
   };
 }
