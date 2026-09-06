@@ -29,6 +29,7 @@
         "${modifier}+Return" = "exec foot";
         "${modifier}+Shift+q" = "kill";
         "${modifier}+d" = "exec fuzzel";
+        "${modifier}+Shift+v" = "exec cliphist list | fuzzel --dmenu --prompt 'Clipboard: ' | cliphist decode | wl-copy";
 
         # Focus
         "${modifier}+h" = "focus left";
@@ -165,11 +166,17 @@
     };
   };
 
+  services.cliphist = {
+    enable = true;
+    allowImages = true;
+  };
+
   home.packages = with pkgs; [
+    brightnessctl
+    cliphist
+    grim
+    playerctl
     swaybg
     wl-clipboard
-    playerctl
-    brightnessctl
-    grim
   ];
 }
