@@ -9,6 +9,7 @@
     libnotify
     mpv
     neovim
+    networkmanagerapplet
     openfortivpn
     pavucontrol
     remmina

@@ -14,6 +14,7 @@
         { command = "swaybg -i ~/Pictures/wallpaper.png -m fill"; }
         { command = "waybar"; }
         { command = "mako"; }
+        { command = "nm-applet --indicator"; }
         { command = "sleep 0.5 && swaymsg workspace number 1"; }
       ];
 
