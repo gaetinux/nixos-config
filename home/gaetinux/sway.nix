@@ -114,8 +114,9 @@
         "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
         "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
 
-        # Screenshot
-        "Print" = "exec grim";
+        # Screenshots
+        "Print" = "exec grim - | wl-copy";
+        "Shift+Print" = "exec grim -g \"$(slurp)\" - | wl-copy";
       };
 
       window = {
@@ -176,6 +177,7 @@
     cliphist
     grim
     playerctl
+    slurp
     swaybg
     wl-clipboard
   ];
