@@ -10,6 +10,7 @@
     ../../modules/audio.nix
     ../../modules/virtualization.nix
     ../../modules/gaming.nix
+    ../../modules/bluetooth.nix
   ];
 
   # Boot
