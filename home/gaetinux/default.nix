@@ -12,6 +12,7 @@
     ./gtk.nix
     ./swaylock.nix
     ./thunar.nix
+    ./mime.nix
   ];
     
   home.username = "gaetinux";
