@@ -25,6 +25,7 @@
           "network"
           "pulseaudio"
           "tray"
+          "custom/power"
           "clock"
         ];
 
@@ -58,6 +59,12 @@
 
         tray = {
           spacing = 10;
+        };
+
+        "custom/power" = {
+          format = "⏻";
+          tooltip = false;
+          on-click = "~/.local/bin/powermenu";
         };
 
         clock = {
@@ -109,6 +116,11 @@
       #tray,
       #clock {
         padding: 0 10px;
+      }
+
+      #custom-power {
+        padding: 0 10px;
+        font-size: 15px;
       }
 
       #clock {

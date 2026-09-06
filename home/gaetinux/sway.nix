@@ -155,6 +155,7 @@
 
   home.packages = with pkgs; [
     swaybg
+    swaylock
     wl-clipboard
     playerctl
     brightnessctl
