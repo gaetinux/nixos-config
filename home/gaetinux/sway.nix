@@ -8,7 +8,7 @@
     config = {
       modifier = "Mod4";
       terminal = "foot";
-      menu = "wmenu-run";
+      menu = "fuzzel";
 
       startup = [
         { command = "waybar"; }
@@ -26,7 +26,7 @@
       in {
         "${modifier}+Return" = "exec foot";
         "${modifier}+Shift+q" = "kill";
-        "${modifier}+d" = "exec wmenu-run";
+        "${modifier}+d" = "exec fuzzel";
 
         "${modifier}+h" = "focus left";
         "${modifier}+j" = "focus down";
@@ -106,7 +106,6 @@
   };
 
   home.packages = with pkgs; [
-    wmenu
     wl-clipboard
     playerctl
     brightnessctl

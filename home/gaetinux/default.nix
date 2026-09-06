@@ -7,6 +7,7 @@
     ./waybar.nix
     ./mako.nix
     ./foot.nix
+    ./fuzzel.nix
   ];
     
   home.username = "gaetinux";
