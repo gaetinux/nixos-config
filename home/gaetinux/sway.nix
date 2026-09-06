@@ -23,6 +23,23 @@
         };
       };
 
+      modes = {
+        resize = {
+          "h" = "resize shrink width 10 px";
+          "j" = "resize grow height 10 px";
+          "k" = "resize shrink height 10 px";
+          "l" = "resize grow width 10 px";
+
+          "Left" = "resize shrink width 10 px";
+          "Down" = "resize grow height 10 px";
+          "Up" = "resize shrink height 10 px";
+          "Right" = "resize grow width 10 px";
+
+          "Return" = "mode default";
+          "Escape" = "mode default";
+        };
+      };
+
       keybindings = let
         modifier = "Mod4";
       in {
@@ -30,6 +47,7 @@
         "${modifier}+Shift+q" = "kill";
         "${modifier}+d" = "exec fuzzel";
         "${modifier}+Shift+v" = "exec cliphist list | fuzzel --dmenu --prompt 'Clipboard: ' | cliphist decode | wl-copy";
+        "${modifier}+r" = "mode resize";
 
         # Focus
         "${modifier}+h" = "focus left";
@@ -88,10 +106,6 @@
         "${modifier}+w" = "layout tabbed";
         "${modifier}+e" = "layout toggle split";
         "${modifier}+a" = "focus parent";
-
-        # Scratchpad
-        #"${modifier}+Shift+minus" = "move scratchpad";
-        #"${modifier}+minus" = "scratchpad show";
 
         # Session
         "${modifier}+Shift+c" = "reload";
