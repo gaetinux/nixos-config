@@ -28,6 +28,8 @@
   # System
   nixpkgs.config.allowUnfree = true;
   services.printing.enable = true;
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
 
   # Applications
   programs.appimage = {
