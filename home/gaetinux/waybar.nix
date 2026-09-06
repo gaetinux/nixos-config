@@ -24,6 +24,7 @@
           "memory"
           "network"
           "pulseaudio"
+          "pulseaudio/slider"
           "tray"
           "custom/power"
           "clock"
@@ -54,7 +55,12 @@
         pulseaudio = {
           format = "󰕾  {volume}%";
           format-muted = "󰝟  Muted";
-          on-click = "pavucontrol";
+        };
+
+        "pulseaudio/slider" = {
+          min = 0;
+          max = 100;
+          orientation = "horizontal";
         };
 
         tray = {
@@ -119,6 +125,26 @@
       #custom-power,
       #clock {
         padding: 0 10px;
+      }
+
+      #pulseaudio-slider {
+        min-width: 80px;
+        padding: 0 8px;
+      }
+
+      #pulseaudio-slider slider {
+        min-width: 8px;
+        min-height: 8px;
+      }
+
+      #pulseaudio-slider trough {
+        min-width: 80px;
+        min-height: 4px;
+        background: #2a2938;
+      }
+
+      #pulseaudio-slider highlight {
+        background: #a99bc6;
       }
 
       #custom-power {
