@@ -11,8 +11,10 @@
       menu = "fuzzel";
 
       startup = [
+        { command = "swaybg -i ~/Pictures/wallpaper.png -m fill"; }
         { command = "waybar"; }
         { command = "mako"; }
+        { command = "sleep 0.5 && swaymsg workspace number 1"; }
       ];
 
       input = {
@@ -108,6 +110,7 @@
   };
 
   home.packages = with pkgs; [
+    swaybg
     wl-clipboard
     playerctl
     brightnessctl
