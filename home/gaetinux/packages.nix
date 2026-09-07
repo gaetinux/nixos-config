@@ -12,6 +12,7 @@
     networkmanagerapplet
     openfortivpn
     pavucontrol
+    polkit_gnome
     remmina
   ];
 }

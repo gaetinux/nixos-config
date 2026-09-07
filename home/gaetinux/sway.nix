@@ -15,6 +15,9 @@
         { command = "waybar"; }
         { command = "mako"; }
         { command = "nm-applet --indicator"; }
+        {
+          command = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        }
 
         # Startup applications
         { command = "steam -silent"; }
@@ -118,7 +121,7 @@
 
         # Session
         "${modifier}+Shift+c" = "reload";
-        "${modifier}+Shift+e" = "exec swaynag -t warning -m 'Exit Sway?' -B 'Yes' 'swaymsg exit'";
+        "${modifier}+Shift+e" = "exec ~/.local/bin/powermenu";
 
         # Audio
         "XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
