@@ -4,14 +4,14 @@
   programs.git = {
     enable = true;
 
-    userName = "Gaetan Pawlowski";
-    userEmail = "gaetan@gaetinux.com";
+    settings = {
+      user = {
+        name = "Gaetan Pawlowski";
+        email = "gaetan@gaetinux.com";
+      };
 
-    extraConfig = {
       init.defaultBranch = "main";
-
       pull.rebase = false;
-
       push.autoSetupRemote = true;
     };
   };
