@@ -24,6 +24,10 @@
       gp = "git push";
       gl = "git log --oneline --graph --decorate";
     };
+
+    initExtra = ''
+      export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+    '';
   };
 
   programs.starship = {
