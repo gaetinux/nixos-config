@@ -40,5 +40,6 @@
     fd
     jq
     tree
+    ncdu
   ];
 }
