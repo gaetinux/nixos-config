@@ -11,6 +11,7 @@
     ../../modules/virtualization.nix
     ../../modules/gaming.nix
     ../../modules/bluetooth.nix
+    ../../modules/nix.nix
   ];
 
   # Boot
