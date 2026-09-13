@@ -24,7 +24,6 @@
             --remember \
             --remember-user-session \
             --asterisks \
-            --theme "border=magenta;text=white;prompt=magenta;time=gray;action=magenta;button=magenta;container=black;input=white" \
             --cmd sway
         '';
         user = "greeter";
