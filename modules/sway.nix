@@ -18,7 +18,15 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
+        command = ''
+          ${pkgs.tuigreet}/bin/tuigreet \
+            --time \
+            --remember \
+            --remember-user-session \
+            --asterisks \
+            --theme "border=magenta;text=white;prompt=magenta;time=gray;action=magenta;button=magenta;container=black;input=white" \
+            --cmd sway
+        '';
         user = "greeter";
       };
     };
