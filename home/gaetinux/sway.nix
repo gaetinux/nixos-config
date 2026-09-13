@@ -149,6 +149,18 @@
       window = {
         border = 2;
         titlebar = false;
+
+        commands = [
+          # Battle.net creates a small auxiliary XWayland window.
+          # Hide it in the scratchpad.
+          {
+            criteria = {
+              class = "steam_app_4179891360";
+              title = "^$";
+            };
+            command = "move scratchpad";
+          }
+        ];
       };
 
       colors = {
