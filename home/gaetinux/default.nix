@@ -18,6 +18,7 @@
     ./ssh.nix
     ./devops.nix
     ./direnv.nix
+    ./ai.nix
   ];
     
   home.username = "gaetinux";
