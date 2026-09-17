@@ -10,25 +10,34 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
-    nixosConfigurations.odin = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
+    {
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
 
-      modules = [
-        ./hosts/odin/configuration.nix
+      nixosConfigurations.odin = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.gaetinux = {
-            imports = [
-              ./home/gaetinux
-              ./home/gaetinux/hosts/odin.nix
-            ];
-          };
-        }
-      ];
+        modules = [
+          ./hosts/odin/configuration.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.gaetinux = {
+              imports = [
+                ./home/gaetinux
+                ./home/gaetinux/hosts/odin.nix
+              ];
+            };
+          }
+        ];
+      };
     };
-  };
 }

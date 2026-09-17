@@ -20,10 +20,10 @@
     ./direnv.nix
     ./ai.nix
   ];
-    
+
   home.username = "gaetinux";
   home.homeDirectory = "/home/gaetinux";
-  
+
   home.file."Pictures/wallpaper.png".source = ../../assets/wallpapers/wallpaper.png;
   home.file.".local/bin/powermenu" = {
     source = ./scripts/powermenu.sh;

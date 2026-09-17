@@ -8,7 +8,8 @@ Manager](https://github.com/nix-community/home-manager) and Flakes.
 
 ## Overview
 
-This configuration currently targets my main workstation, `odin`.
+This repository contains personal NixOS configurations for one or more hosts.
+The examples below use `odin`, one of the configured hosts.
 
 The desktop environment is built around:
 
@@ -40,7 +41,7 @@ Nix, Python, Kubernetes and general system administration.
 
 ### Rebuild
 
-Apply the current configuration to `odin`:
+Apply the configuration for a host, using `odin` as an example:
 
 ``` bash
 sudo nixos-rebuild switch --flake .#odin
@@ -77,6 +78,34 @@ Validate the flake before applying changes:
 nix flake check
 ```
 
+Format the Nix files in the repository:
+
+``` bash
+nix fmt
+```
+
+Check formatting without modifying files:
+
+``` bash
+nix fmt -- --ci
+```
+
+The formatter currently targets `x86_64-linux`.
+
+## Porting to another host
+
+Each directory under `hosts/` contains host-specific hardware and system
+settings. The files under `hosts/odin/` should not be copied unchanged to
+another machine.
+
+To add another host, generate its hardware configuration, create a host module,
+and add a new entry to `nixosConfigurations` in `flake.nix`:
+
+``` bash
+sudo nixos-generate-config --show-hardware-config \
+  > hosts/<hostname>/hardware-configuration.nix
+```
+
 ### Garbage collection
 
 Remove old, unused Nix store paths:
@@ -99,8 +128,8 @@ sudo nix-store --optimise
 
 ## Notes
 
-This repository represents my personal workstation configuration and
-evolves alongside my NixOS setup.
+This repository contains my personal NixOS configuration and evolves alongside
+my systems.
 
 Host-specific settings belong in `hosts/`, reusable system configuration
 in `modules/`, and user-level configuration in `home/gaetinux/`.

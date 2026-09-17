@@ -19,7 +19,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages;
 
-  networking.hostName = "odin"; 
+  networking.hostName = "odin";
 
   # Keep this value at the NixOS version used for the initial installation.
   system.stateVersion = "26.05";
