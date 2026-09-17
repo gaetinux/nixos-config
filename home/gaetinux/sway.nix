@@ -19,9 +19,6 @@
           command = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
         }
 
-        # Startup applications
-        { command = "steam -silent"; }
-
         # Start on workspace 1
         { command = "sleep 0.5 && swaymsg workspace number 1"; }
       ];

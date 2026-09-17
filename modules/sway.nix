@@ -11,6 +11,7 @@
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    # Sway starts without this flag but emits a warning with NVIDIA.
     extraOptions = [ "--unsupported-gpu" ];
   };
 
