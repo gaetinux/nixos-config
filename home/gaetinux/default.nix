@@ -19,14 +19,19 @@
     ./devops.nix
     ./direnv.nix
     ./ai.nix
+    ./xdg.nix
   ];
 
   home.username = "gaetinux";
   home.homeDirectory = "/home/gaetinux";
 
-  home.file."Pictures/wallpaper.png".source = ../../assets/wallpapers/wallpaper.png;
+  home.file."Images/wallpaper.png".source = ../../assets/wallpapers/wallpaper.png;
   home.file.".local/bin/powermenu" = {
     source = ./scripts/powermenu.sh;
+    executable = true;
+  };
+  home.file.".local/bin/screenshot" = {
+    source = ./scripts/screenshot.sh;
     executable = true;
   };
 

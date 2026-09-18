@@ -14,5 +14,6 @@
     pavucontrol
     polkit_gnome
     remmina
+    xdg-user-dirs
   ];
 }

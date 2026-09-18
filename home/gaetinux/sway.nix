@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   wayland.windowManager.sway = {
@@ -11,7 +11,7 @@
       menu = "fuzzel";
 
       startup = [
-        { command = "swaybg -i ~/Pictures/wallpaper.png -m fill"; }
+        { command = "swaybg -i ${config.xdg.userDirs.pictures}/wallpaper.png -m fill"; }
         { command = "waybar"; }
         { command = "mako"; }
         { command = "nm-applet --indicator"; }
@@ -142,8 +142,8 @@
           "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
 
           # Screenshots
-          "Print" = "exec grim - | wl-copy";
-          "Shift+Print" = "exec grim -g \"$(slurp)\" - | wl-copy";
+          "Print" = "exec ~/.local/bin/screenshot";
+          "Shift+Print" = "exec ~/.local/bin/screenshot --area";
         };
 
       window = {
