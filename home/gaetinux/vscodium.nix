@@ -14,6 +14,7 @@ in
     package = vscodium;
 
     profiles.default.extensions = with pkgs.vscode-extensions; [
+      anthropic.claude-code
       redhat.vscode-yaml
       ms-python.python
       ms-kubernetes-tools.vscode-kubernetes-tools

@@ -18,7 +18,6 @@
     ./ssh.nix
     ./devops.nix
     ./direnv.nix
-    ./ai.nix
     ./xdg.nix
   ];
 
