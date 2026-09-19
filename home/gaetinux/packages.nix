@@ -7,10 +7,12 @@
     imv
     keepassxc
     libnotify
+    libreoffice
     mpv
     neovim
     networkmanagerapplet
     openfortivpn
+    obsidian
     pavucontrol
     polkit_gnome
     remmina

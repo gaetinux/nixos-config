@@ -32,6 +32,29 @@
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
+          format = "{name} {windows}";
+          format-window-separator = " ";
+          window-rewrite-default = "";
+          window-rewrite = {
+            "class<firefox>" = "";
+            "class<foot>" = "";
+            "class<codium>" = "󰨞";
+            "class<com.vscodium.codium>" = "󰨞";
+            "class<thunar>" = "";
+            "class<Thunar>" = "";
+            "class<steam>" = "";
+            "class<Steam>" = "";
+            "class<obsidian>" = "󰎚";
+            "class<md.obsidian.Obsidian>" = "󰎚";
+            "class<libreoffice.*>" = "";
+            "class<evince>" = "";
+            "class<org.gnome.Evince>" = "";
+            "class<imv>" = "";
+            "class<mpv>" = "";
+            "class<keepassxc>" = "󰌋";
+            "class<org.keepassxc.KeePassXC>" = "󰌋";
+            "class<org.remmina.Remmina>" = "󰢹";
+          };
         };
 
         cpu = {
