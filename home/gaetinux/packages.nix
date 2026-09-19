@@ -13,7 +13,6 @@
     neovim
     networkmanagerapplet
     openfortivpn
-    obsidian
     pavucontrol
     polkit_gnome
     remmina

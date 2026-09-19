@@ -44,8 +44,6 @@
             "class<Thunar>" = "";
             "class<steam>" = "";
             "class<Steam>" = "";
-            "class<obsidian>" = "󰎚";
-            "class<md.obsidian.Obsidian>" = "󰎚";
             "class<libreoffice.*>" = "";
             "class<evince>" = "";
             "class<org.gnome.Evince>" = "";
