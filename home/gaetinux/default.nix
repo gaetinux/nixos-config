@@ -33,6 +33,10 @@
     source = ./scripts/screenshot.sh;
     executable = true;
   };
+  home.file.".local/bin/notifications" = {
+    source = ./scripts/notifications.sh;
+    executable = true;
+  };
 
   # Keep this value at the Home Manager version used for the initial setup.
   home.stateVersion = "26.05";

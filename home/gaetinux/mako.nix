@@ -25,6 +25,8 @@
       max-icon-size = 48;
 
       anchor = "top-right";
+
+      max-history = 50;
     };
 
     extraConfig = ''

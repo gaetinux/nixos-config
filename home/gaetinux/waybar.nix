@@ -25,6 +25,7 @@
           "pulseaudio"
           "pulseaudio/slider"
           "tray"
+          "custom/notifications"
           "custom/power"
           "clock"
         ];
@@ -81,6 +82,14 @@
           spacing = 10;
         };
 
+        "custom/notifications" = {
+          format = "󰂚 {}";
+          exec = "~/.local/bin/notifications count";
+          interval = 5;
+          tooltip = false;
+          on-click = "~/.local/bin/notifications show";
+        };
+
         "custom/power" = {
           format = "⏻";
           tooltip = false;
@@ -135,6 +144,7 @@
       #memory,
       #pulseaudio,
       #tray,
+      #custom-notifications,
       #custom-power,
       #clock {
         padding: 0 10px;
