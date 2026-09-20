@@ -52,6 +52,7 @@
             "class<keepassxc>" = "󰌋";
             "class<org.keepassxc.KeePassXC>" = "󰌋";
             "class<org.remmina.Remmina>" = "󰢹";
+            "class<discord>" = "󰙯";
           };
         };
 
