@@ -106,24 +106,34 @@ sudo nixos-generate-config --show-hardware-config \
   > hosts/<hostname>/hardware-configuration.nix
 ```
 
-### Garbage collection
+## Garbage collection
 
-Remove old, unused Nix store paths:
+The Nix store is cleaned automatically by `modules/nix.nix`. A weekly timer
+deletes system generations older than 30 days, and the store is deduplicated
+afterwards. Both run on Monday evening (21:30 and 22:15), at idle CPU and I/O
+priority: this machine is powered off at night, so a nightly timer would only
+ever be caught up shortly after the next boot.
+
+The timers are `Persistent`, so a Monday spent powered off is still caught up
+at the next boot rather than skipped.
+
+Trigger a collection immediately when space is needed sooner:
 
 ``` bash
-sudo nix-collect-garbage -d
+sudo systemctl start nix-gc.service
 ```
 
-Remove unused paths from the current user's profile as well:
+The automatic collection does not cover the current user's own Nix profile.
+Clean it separately when needed:
 
 ``` bash
 nix-collect-garbage -d
 ```
 
-Optionally optimize the Nix store afterwards:
+Inspect both timers:
 
 ``` bash
-sudo nix-store --optimise
+systemctl list-timers nix-gc.timer nix-optimise.timer
 ```
 
 ## Notes
