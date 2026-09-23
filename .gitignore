@@ -1,2 +1,7 @@
 result
 result-*
+
+# Planning and execution artefacts from the superpowers workflow.
+# Decisions worth keeping are recorded in docs/decisions/ instead.
+.superpowers/
+docs/superpowers/
