@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./theme.nix
     ./packages.nix
     ./sway.nix
     ./waybar.nix

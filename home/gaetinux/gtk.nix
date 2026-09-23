@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
+let
+  inherit (config.theme) icons;
+in
 {
   gtk = {
     enable = true;
@@ -10,8 +13,8 @@
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = icons.name;
+      package = icons.package;
     };
 
     gtk3.extraConfig = {

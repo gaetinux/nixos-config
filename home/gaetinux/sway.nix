@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  inherit (config.theme) colors;
+in
 {
   wayland.windowManager.sway = {
     enable = true;
@@ -165,35 +168,35 @@
 
       colors = {
         focused = {
-          border = "#8b7fa8";
-          background = "#8b7fa8";
-          text = "#ffffff";
-          indicator = "#a99bc6";
-          childBorder = "#8b7fa8";
+          border = colors.accentDeep;
+          background = colors.accentDeep;
+          text = colors.text;
+          indicator = colors.accent;
+          childBorder = colors.accentDeep;
         };
 
         focusedInactive = {
-          border = "#3a3545";
-          background = "#3a3545";
-          text = "#a0a0a0";
-          indicator = "#3a3545";
-          childBorder = "#3a3545";
+          border = colors.surfaceAlt;
+          background = colors.surfaceAlt;
+          text = colors.textMuted;
+          indicator = colors.surfaceAlt;
+          childBorder = colors.surfaceAlt;
         };
 
         unfocused = {
-          border = "#28242f";
-          background = "#28242f";
-          text = "#777777";
-          indicator = "#28242f";
-          childBorder = "#28242f";
+          border = colors.surface;
+          background = colors.surface;
+          text = colors.textMuted;
+          indicator = colors.surface;
+          childBorder = colors.surface;
         };
 
         urgent = {
-          border = "#a54242";
-          background = "#a54242";
-          text = "#ffffff";
-          indicator = "#a54242";
-          childBorder = "#a54242";
+          border = colors.urgent;
+          background = colors.urgent;
+          text = colors.text;
+          indicator = colors.urgent;
+          childBorder = colors.urgent;
         };
       };
 

@@ -37,6 +37,11 @@ Nix, Python, Kubernetes and general system administration.
 └── flake.lock
 ```
 
+The desktop palette, font and icon theme are declared once in
+`home/gaetinux/theme.nix` and consumed by Sway, Waybar, mako, swaylock,
+fuzzel, foot and GTK. Colours are typed, so an invalid value fails
+`nix flake check` rather than rendering incorrectly.
+
 ## Usage
 
 ### Rebuild
