@@ -91,6 +91,15 @@ in
           "${modifier}+Shift+space" = "floating toggle";
           "${modifier}+space" = "focus mode_toggle";
 
+          # Workspace navigation
+          "${modifier}+Tab" = "workspace back_and_forth";
+
+          "${modifier}+Control+h" = "workspace prev_on_output";
+          "${modifier}+Control+l" = "workspace next_on_output";
+
+          "${modifier}+Control+Left" = "workspace prev_on_output";
+          "${modifier}+Control+Right" = "workspace next_on_output";
+
           # Workspaces
           "${modifier}+ampersand" = "workspace number 1";
           "${modifier}+eacute" = "workspace number 2";
@@ -148,6 +157,23 @@ in
           "Print" = "exec ~/.local/bin/screenshot";
           "Shift+Print" = "exec ~/.local/bin/screenshot --area";
         };
+
+      # Applications with a stable home. Criteria are app_id for native
+      # Wayland clients and class for XWayland ones.
+      assigns = {
+        "1" = [ { app_id = "firefox"; } ];
+        "2" = [ { app_id = "foot"; } ];
+        "3" = [ { app_id = "codium"; } ];
+        "4" = [ { app_id = "thunar"; } ];
+        "5" = [ { app_id = "org.remmina.Remmina"; } ];
+        "6" = [
+          { app_id = "^libreoffice.*"; }
+          { app_id = "org.gnome.Evince"; }
+        ];
+        "9" = [ { class = "discord"; } ];
+        # Anchored so individual games (steam_app_*) stay where they launch.
+        "10" = [ { class = "^[Ss]team$"; } ];
+      };
 
       window = {
         border = 2;
