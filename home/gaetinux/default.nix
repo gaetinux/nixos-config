@@ -16,6 +16,7 @@
     ./mime.nix
     ./shell.nix
     ./git.nix
+    ./gh.nix
     ./ssh.nix
     ./devops.nix
     ./direnv.nix
