@@ -1,15 +1,18 @@
-{ ... }:
+{ config, ... }:
 
+let
+  inherit (config.theme) colors fonts;
+in
 {
   services.mako = {
     enable = true;
 
     settings = {
-      font = "FiraCode Nerd Font 10";
+      font = "${fonts.main} 10";
 
-      background-color = "#2a2938";
-      text-color = "#ffffff";
-      border-color = "#a99bc6";
+      background-color = colors.surface;
+      text-color = colors.text;
+      border-color = colors.accent;
 
       border-size = 2;
       border-radius = 6;
@@ -31,8 +34,8 @@
 
     extraConfig = ''
       [urgency=high]
-      background-color=#33262c
-      border-color=#a54242
+      background-color=${colors.urgentSurface}
+      border-color=${colors.urgent}
       default-timeout=0
     '';
   };
