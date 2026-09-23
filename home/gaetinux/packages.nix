@@ -16,6 +16,7 @@
     openfortivpn
     pavucontrol
     polkit_gnome
+    python3
     remmina
     xdg-user-dirs
   ];
