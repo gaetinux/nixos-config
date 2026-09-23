@@ -16,6 +16,7 @@ shared modules.
 - `home/gaetinux/hosts/<hostname>.nix`: host-specific user configuration.
 - `assets/`: wallpapers and other repository assets.
 - `.github/workflows/`: continuous integration workflows.
+- `docs/decisions/`: architecture decision records, numbered and dated.
 - `TODO.md`: planned improvements and maintenance work.
 
 ## Configuration Guidelines
