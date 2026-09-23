@@ -1,5 +1,8 @@
-{ ... }:
+{ config, ... }:
 
+let
+  inherit (config.theme) colors fonts;
+in
 {
   programs.waybar = {
     enable = true;
@@ -106,38 +109,38 @@
 
     style = ''
       * {
-        font-family: "FiraCode Nerd Font";
+        font-family: "${fonts.main}";
         font-size: 13px;
         border: none;
         border-radius: 0;
       }
 
       window#waybar {
-        background: #181818;
-        color: #ffffff;
-        border-bottom: 2px solid #2a2938;
+        background: ${colors.base};
+        color: ${colors.text};
+        border-bottom: 2px solid ${colors.surface};
       }
 
       #workspaces button {
         padding: 0 8px;
-        color: #a0a0a0;
+        color: ${colors.textMuted};
         background: transparent;
       }
 
       #workspaces button.focused {
-        color: #ffffff;
-        background: #2a2938;
-        box-shadow: inset 0 -2px #a99bc6;
+        color: ${colors.text};
+        background: ${colors.surface};
+        box-shadow: inset 0 -2px ${colors.accent};
       }
 
       #workspaces button.urgent {
-        color: #ffffff;
-        background: #a54242;
+        color: ${colors.text};
+        background: ${colors.urgent};
       }
 
       #window {
         padding: 0 12px;
-        color: #d8d8d8;
+        color: ${colors.text};
       }
 
       #cpu,
@@ -163,15 +166,15 @@
       #pulseaudio-slider trough {
         min-width: 80px;
         min-height: 4px;
-        background: #2a2938;
+        background: ${colors.surface};
       }
 
       #pulseaudio-slider highlight {
-        background: #a99bc6;
+        background: ${colors.accent};
       }
 
       #custom-power {
-        color: #a99bc6;
+        color: ${colors.accent};
         font-size: 15px;
       }
 
