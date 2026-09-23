@@ -1,12 +1,16 @@
-{ ... }:
+{ config, ... }:
 
+let
+  inherit (config.theme) colors fonts;
+  inherit (config.theme.lib) hex;
+in
 {
   programs.foot = {
     enable = true;
 
     settings = {
       main = {
-        font = "FiraCode Nerd Font:size=11";
+        font = "${fonts.main}:size=${toString fonts.size}";
         pad = "8x8";
       };
 
@@ -19,8 +23,8 @@
       };
 
       colors-dark = {
-        background = "181818";
-        foreground = "e6e6e6";
+        background = hex colors.base;
+        foreground = hex colors.text;
       };
     };
   };
