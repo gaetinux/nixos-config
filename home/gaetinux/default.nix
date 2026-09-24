@@ -7,7 +7,6 @@
     ./sway.nix
     ./waybar.nix
     ./mako.nix
-    ./foot.nix
     ./fuzzel.nix
     ./vscodium.nix
     ./gtk.nix

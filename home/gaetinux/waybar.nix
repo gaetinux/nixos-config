@@ -41,7 +41,7 @@ in
           window-rewrite-default = "";
           window-rewrite = {
             "class<firefox>" = "";
-            "class<foot>" = "";
+            "class<dev.warp.Warp>" = "";
             "class<codium>" = "󰨞";
             "class<com.vscodium.codium>" = "󰨞";
             "class<thunar>" = "";
