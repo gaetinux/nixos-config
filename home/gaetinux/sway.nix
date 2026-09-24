@@ -162,8 +162,8 @@ in
       # Wayland clients and class for XWayland ones.
       assigns = {
         "1" = [ { app_id = "firefox"; } ];
-        # Wayland reports app_id, XWayland reports class; match both until the
-        # real identifier is confirmed by opening Warp.
+        # Warp runs under XWayland today, so class is the criterion that
+        # matches; app_id is kept for the day it goes native Wayland.
         "2" = [
           { app_id = "dev.warp.Warp"; }
           { class = "dev.warp.Warp"; }
