@@ -18,6 +18,7 @@
     ./git.nix
     ./gh.nix
     ./claude-code.nix
+    ./warp.nix
     ./ssh.nix
     ./devops.nix
     ./direnv.nix
