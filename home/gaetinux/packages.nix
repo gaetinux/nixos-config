@@ -18,6 +18,7 @@
     polkit_gnome
     python3
     remmina
+    warp-terminal
     xdg-user-dirs
   ];
 }
