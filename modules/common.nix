@@ -31,6 +31,13 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
 
+  # Serves /bin and /usr/bin from the PATH of the calling process, so scripts
+  # with hard-coded shebangs run unpatched. NixOS ships only /bin/sh and
+  # /usr/bin/env, which is enough for well-behaved software but not for the
+  # third-party scripts Claude Code plugins install into ~/.claude: those carry
+  # #!/bin/bash and die with "bad interpreter" without this.
+  services.envfs.enable = true;
+
   # Applications
   programs.appimage = {
     enable = true;
