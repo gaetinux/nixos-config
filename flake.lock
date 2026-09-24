@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "claude-statusline": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790277789,
+        "narHash": "sha256-bQyVJ6QB72gtV/8beH53LXF1mdutCyJdq6pk0lQrbHY=",
+        "owner": "gaetinux",
+        "repo": "claude-statusline",
+        "rev": "9617690614d8ae939d8fc08f79a104cbe92ad54c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gaetinux",
+        "repo": "claude-statusline",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -39,6 +55,7 @@
     },
     "root": {
       "inputs": {
+        "claude-statusline": "claude-statusline",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
