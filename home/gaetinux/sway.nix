@@ -245,10 +245,10 @@ in
     allowImages = true;
   };
 
+  # brightnessctl and grim are omitted on purpose: programs.sway already
+  # provides them through its extraPackages default.
   home.packages = with pkgs; [
-    brightnessctl
     cliphist
-    grim
     playerctl
     slurp
     swaybg
