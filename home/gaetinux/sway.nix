@@ -10,7 +10,7 @@ in
 
     config = {
       modifier = "Mod4";
-      terminal = "foot";
+      terminal = "warp-terminal";
       menu = "fuzzel";
 
       startup = [
@@ -58,7 +58,7 @@ in
           modifier = "Mod4";
         in
         {
-          "${modifier}+Return" = "exec foot";
+          "${modifier}+Return" = "exec warp-terminal";
           "${modifier}+Shift+q" = "kill";
           "${modifier}+d" = "exec fuzzel";
           "${modifier}+Shift+v" =
@@ -162,7 +162,12 @@ in
       # Wayland clients and class for XWayland ones.
       assigns = {
         "1" = [ { app_id = "firefox"; } ];
-        "2" = [ { app_id = "foot"; } ];
+        # Warp runs under XWayland today, so class is the criterion that
+        # matches; app_id is kept for the day it goes native Wayland.
+        "2" = [
+          { app_id = "dev.warp.Warp"; }
+          { class = "dev.warp.Warp"; }
+        ];
         "3" = [ { app_id = "codium"; } ];
         "4" = [ { app_id = "thunar"; } ];
         "5" = [ { app_id = "org.remmina.Remmina"; } ];

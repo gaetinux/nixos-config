@@ -7,7 +7,6 @@
     ./sway.nix
     ./waybar.nix
     ./mako.nix
-    ./foot.nix
     ./fuzzel.nix
     ./vscodium.nix
     ./gtk.nix
@@ -18,6 +17,7 @@
     ./git.nix
     ./gh.nix
     ./claude-code.nix
+    ./warp.nix
     ./ssh.nix
     ./devops.nix
     ./direnv.nix

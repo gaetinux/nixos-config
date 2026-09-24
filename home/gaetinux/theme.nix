@@ -34,7 +34,7 @@ in
       size = mkOption {
         type = types.int;
         default = 11;
-        description = "Base point size, used by foot and fuzzel.";
+        description = "Base point size, used by fuzzel.";
       };
     };
 

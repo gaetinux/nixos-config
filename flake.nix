@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # warp-terminal only became free software in April 2026, after the 26.05
+    # freeze, so the stable branch still carries the older unfree release.
+    # Deliberately not following nixpkgs: that would defeat the purpose.
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     # Personal Claude Code status line. Plain scripts, no flake of its own.
     claude-statusline = {
       url = "github:gaetinux/claude-statusline";

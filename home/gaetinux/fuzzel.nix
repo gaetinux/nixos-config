@@ -14,7 +14,7 @@ in
     settings = {
       main = {
         font = "${fonts.main}:size=${toString fonts.size}";
-        terminal = "foot";
+        terminal = "warp-terminal";
         layer = "overlay";
         width = 40;
         lines = 10;
