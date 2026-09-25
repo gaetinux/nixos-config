@@ -13,18 +13,21 @@ in
       terminal = "warp-terminal";
       menu = "fuzzel";
 
-      startup = [
-        { command = "swaybg -i ${config.xdg.userDirs.pictures}/wallpaper.png -m fill"; }
-        { command = "waybar"; }
-        { command = "mako"; }
-        { command = "nm-applet --indicator"; }
-        {
-          command = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-        }
+      # sway names the first workspace after the earliest "workspace <name>"
+      # binding in the config file, by position rather than by number. Sorting
+      # the bindings attribute set alphabetically puts agrave (workspace 10)
+      # ahead of ampersand (workspace 1), which is how a session used to open
+      # on workspace 10. This emits the matching binding first instead.
+      defaultWorkspace = "workspace number 1";
 
-        # Start on workspace 1
-        { command = "sleep 0.5 && swaymsg workspace number 1"; }
-      ];
+      # sway spawns swaybg itself for whatever background an output declares,
+      # so naming the wallpaper here replaces the exec that used to layer a
+      # second swaybg over the default one.
+      output = {
+        "*" = {
+          bg = "${../../assets/wallpapers/wallpaper.png} fill";
+        };
+      };
 
       input = {
         "type:keyboard" = {
@@ -246,7 +249,8 @@ in
   };
 
   # brightnessctl and grim are omitted on purpose: programs.sway already
-  # provides them through its extraPackages default.
+  # provides them through its extraPackages default. swaybg is not in that
+  # default and stays: sway resolves it from PATH to draw the background.
   home.packages = with pkgs; [
     cliphist
     playerctl

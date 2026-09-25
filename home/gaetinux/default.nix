@@ -5,6 +5,7 @@
     ./theme.nix
     ./packages.nix
     ./sway.nix
+    ./session.nix
     ./waybar.nix
     ./mako.nix
     ./fuzzel.nix
@@ -28,7 +29,6 @@
   home.username = "gaetinux";
   home.homeDirectory = "/home/gaetinux";
 
-  home.file."Images/wallpaper.png".source = ../../assets/wallpapers/wallpaper.png;
   home.file.".local/bin/powermenu" = {
     source = ./scripts/powermenu.sh;
     executable = true;
