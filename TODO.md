@@ -24,3 +24,6 @@
       (`nix.gc.automatic`, `nix.optimise.automatic`) instead of the manual
       commands documented in the README
 - [ ] Cache the Nix store in CI to speed up `nix flake check` runs
+- [ ] Correct the stale references to foot in `README.md` and ADR 0001:
+      the terminal has been Warp since the terminal switch, and foot only
+      remains because it sits in the `programs.sway.extraPackages` default
