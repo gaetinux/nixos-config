@@ -7,6 +7,10 @@ in
   programs.waybar = {
     enable = true;
 
+    # Started by the session rather than by a sway exec, so the bar comes back
+    # on its own after a crash and restarts with a home-manager switch.
+    systemd.enable = true;
+
     settings = {
       mainBar = {
         layer = "top";
