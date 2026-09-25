@@ -11,6 +11,7 @@
     ./vscodium.nix
     ./gtk.nix
     ./swaylock.nix
+    ./idle.nix
     ./thunar.nix
     ./mime.nix
     ./shell.nix
