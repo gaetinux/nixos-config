@@ -47,5 +47,14 @@ Deliberately out of scope: theme switching, adopting an upstream theme, and
 geometry. Border radius, border width and gaps stay local to each application,
 where their values are legitimately independent.
 
-If the white foreground proves tiring in foot, the fix is a `textSoft` entry
-rather than a literal.
+If the white foreground proves tiring, the fix is a `textSoft` entry rather
+than a literal.
+
+## Note
+
+2026-09-24: foot was replaced by warp-terminal as the default terminal.
+`home/gaetinux/foot.nix` is gone and the terminal no longer reads
+`config.theme`; foot only remains on the system because it sits in the
+`programs.sway.extraPackages` default. The foot entries above are kept as the
+record of what the palette change did at the time. Everything else in this
+decision still holds.
