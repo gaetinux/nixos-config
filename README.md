@@ -15,7 +15,7 @@ The desktop environment is built around:
 
 -   Sway / Wayland
 -   Waybar
--   Foot
+-   Warp
 -   Fuzzel
 -   Mako
 -   Thunar
@@ -40,7 +40,7 @@ Nix, Python, Kubernetes and general system administration.
 
 The desktop palette, font and icon theme are declared once in
 `home/gaetinux/theme.nix` and consumed by Sway, Waybar, mako, swaylock,
-fuzzel, foot and GTK. Colours are typed, so an invalid value fails
+fuzzel and GTK. Colours are typed, so an invalid value fails
 `nix flake check` rather than rendering incorrectly. See
 [docs/decisions/0001-centralised-theme.md](docs/decisions/0001-centralised-theme.md)
 for the reasoning.
